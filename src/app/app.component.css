@@ -1,0 +1,147 @@
+
+:host {
+    font-family: 'Century Gothic';
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+.content {
+    display: flex;
+    margin: 100px auto 300px;
+    border-radius: 30px;
+    padding: 80px;
+    max-width: 550px;
+    flex-direction: column;
+    align-items: center;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 6px;
+    background-color: rgb(229, 238, 240);
+  } 
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+  }
+
+  .searchInput{
+    font-size: 11px;
+    color: #2c3e50;
+    margin-left: 0px;
+    width: 50%;
+    border-radius: 4px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    font-family: 'Century Gothic';
+  }
+
+  .btnSearch{
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: rgb(225, 107, 255);
+    border-color: rgb(0, 0, 0);
+    font-family: 'Century Gothic';
+  }
+
+  .addInput{
+    font-size: 11px;
+    color: #2c3e50;
+    margin-left: 0px;
+    width: 85%;
+    border-radius: 4px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    font-family: 'Century Gothic';
+  }
+
+  .btnAdd{
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: rgb(225, 107, 255);
+    border-color: rgb(0, 0, 0);
+    font-family: 'Century Gothic';
+  }
+
+  .editInput{
+    font-size: 10px;
+    color: #2c3e50;
+    margin-left: 0px;
+    width: 85%;
+    border-radius: 4px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    font-family: 'Century Gothic';
+  }
+
+  .btnEdit{
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: rgb(119, 183, 255);
+    border-color: rgb(0, 0, 0);
+    font-family: 'Century Gothic';
+  }
+
+  .btnEditSubmit{
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: rgb(119, 183, 255);
+    border-color: rgb(0, 0, 0);
+    font-family: 'Century Gothic';
+  }
+
+  .btnEditCancel{
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: rgb(119, 183, 255);
+    border-color: rgb(0, 0, 0);
+    font-family: 'Century Gothic';
+  }
+
+  .btnDelete{
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: white;
+    border-color: rgb(0, 0, 0);
+    font-family: 'Century Gothic';
+  }
+
+  .btnCompleted{
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(168, 238, 171);
+    border-color: rgb(0, 0, 0);
+    font-family: 'Century Gothic';
+  }
+
+  .btnNotCompleted{
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(253, 167, 167);
+    border-color: rgb(0, 0, 0);
+    font-family: 'Century Gothic';
+  }
+
+  .btnClearComp{
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(168, 238, 171);
+    border-color: rgb(0, 0, 0);
+    font-family: 'Century Gothic';
+  }
+
+  
