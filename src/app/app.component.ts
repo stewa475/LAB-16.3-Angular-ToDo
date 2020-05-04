@@ -12,6 +12,7 @@ export class AppComponent {
   taskId:number = 5;
   taskEdit:string = '';
   taskSearch:string = '';
+  taskArrayCache:ToDo[];
 
   taskArray:ToDo[] = [
     {
@@ -77,8 +78,8 @@ export class AppComponent {
       return this.taskArray.filter((tasks: { completed: any; }) => !tasks.completed).length;
   }
 
-  searchTask = function():void{
-    this.taskArray = this.taskArray.filter((tasks: { task: any; }) => !tasks.task.toLower().contains(this.taskSearch.toLower()));
+  searchTask = function(search:string):boolean{
+    return search.toLowerCase().includes(this.taskSearch.toLowerCase());
   }
 
   atLeastOneCompleted = function():boolean{

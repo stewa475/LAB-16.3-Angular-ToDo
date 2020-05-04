@@ -2,8 +2,8 @@
 
 <h1>{{title}}</h1>
 <div>
-  <input type="text" class="searchInput" placeholder="Search tasks" [(ngModel)]="taskSearch"/>&nbsp;
-  <button class="btnSearch" (click)="searchTask()">Search</button>
+  <input class="searchInput" [(ngModel)]="taskSearch" placeholder="Search tasks">
+  
 </div>
 <br />
 <table>
@@ -13,16 +13,18 @@
     <th>Tasks</th>
   </tr>
   <tr *ngFor="let t of taskArray">
-    <td [hidden]="!t.completed"><button class="btnCompleted" *ngIf="t.completed" (click)="t.completed = !completeTask()">Complete</button></td>
-    <td [hidden]="t.completed"><button class="btnNotCompleted" *ngIf="!t.completed" (click)="t.completed = completeTask()">Pending...</button></td>
-    <td>{{t.taskId}}.</td>
-    <td [hidden]="t.completed">{{t.task}}</td>
-    <td [hidden]="!t.completed" class="completed">{{t.task}}</td>
-    <td [hidden]="t.editing"><button class="btnEdit" *ngIf="!t.editing" (click)="t.editing = editingTask()">Edit</button></td>
-    <td [hidden]="!t.editing"><input type="text" class="editInput" placeholder="Edit task" [(ngModel)]="taskEdit"/></td>
-    <td [hidden]="!t.editing"><button class="btnEditSubmit" *ngIf="t.editing" (click)="editTask(t);t.editing = !editingTask()">Submit</button>&nbsp;</td>
-    <td [hidden]="!t.editing"><button class="btnEditCancel" *ngIf="t.editing" (click)="t.editing = cancelEditTask()">Cancel</button>&nbsp;</td>
-    <td><button class="btnDelete" (click)="removeTask(taskArray.indexOf(t))">x</button></td>
+    <ng-container *ngIf="searchTask(t.task)">
+      <td [hidden]="!t.completed"><button class="btnCompleted" *ngIf="t.completed" (click)="t.completed = !completeTask()">Complete</button></td>
+      <td [hidden]="t.completed"><button class="btnNotCompleted" *ngIf="!t.completed" (click)="t.completed = completeTask()">Pending...</button></td>
+      <td>{{t.taskId}}.</td>
+      <td [hidden]="t.completed">{{t.task}}</td>
+      <td [hidden]="!t.completed" class="completed">{{t.task}}</td>
+      <td [hidden]="t.editing"><button class="btnEdit" *ngIf="!t.editing" (click)="t.editing = editingTask()">Edit</button></td>
+      <td [hidden]="!t.editing"><input type="text" class="editInput" placeholder="Edit task" [(ngModel)]="taskEdit"/></td>
+      <td [hidden]="!t.editing"><button class="btnEditSubmit" *ngIf="t.editing" (click)="editTask(t);t.editing = !editingTask()">Submit</button>&nbsp;</td>
+      <td [hidden]="!t.editing"><button class="btnEditCancel" *ngIf="t.editing" (click)="t.editing = cancelEditTask()">Cancel</button>&nbsp;</td>
+      <td><button class="btnDelete" (click)="removeTask(taskArray.indexOf(t))">x</button></td>
+    </ng-container>
   </tr>
 </table>
 <br />
